@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="CyberCrew">
+    <meta property="og:description" content="The IT Club of DPS Srinagar">
+    <meta property="og:image" content="https://cybercrew-dps.vercel.app/assets/cclogo.png">
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <script src="./scripts/three.min.js"></script>
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/typed.min.js"></script>
+    <script src="./scripts/background.js"></script>
+    <script src="./scripts/functions.js"></script>
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CyberCrew | DPSSGR</title>
+</head>
+
+<body>
+    <div class="header ">
+        <button class="headerButton clickable" onclick="scrollToAbout()">About</button>
+        <button class="headerButton clickable" onclick="window.location.href='events.html'">Events</button>
+        <button class="headerButton clickable " onclick="window.location.href=('https://techknow.dpssrinagar.com')">TechKnow</button>
+             <div class="dropdown">
+                <button class="dropbtn" aria-haspopup="true">Fields</button>
+                <div class="dropdown-content" aria-label="submenu">
+                  <a href="./Fields/Ai.html">AI</a>
+                  <a href="./Fields/Robtoics.html">Robotics</a>
+                  <a href="./Fields/Marketing.html">Digital Marketing</a>
+                  <a href="./Fields/App_Dev.html">App Development</a>
+                  <a href="./Fields/Game_Dev.html">Game Development</a>
+                  <a href="./Fields/Web_Dev.html">Web Development</a>
+                  <a href="./Fields/GraphicDesign.html">Graphic Design</a>
+                  <a href="./Fields/VideoEditing.html">Video Editing</a>
+                </div>
+              </div>
+    </div>
+    <div class="p1" id="p1">
+        <div class="logoContainer">
+            <img src="./assets/cclogo.png" alt="CyberCrew Logo" class="logo">
+        </div>
+        <div class="textContainer">
+            <p>We do <span class="typed" id="typed"></span></p>
+            <script src="./scripts/typed.js"></script>
+        </div>
+    </div>
+    <div class="p2">
+        <div class="wrapper">
+            <div id="c1" class="c1">
+                <h1>The Crew</h1>
+                <p style="width: 85%;">
+                    The CyberCrew is the IT Club of DPS Srinagar. It was founded in 2013, with an aim to provide a
+                    platform to the students of Kashmir to share and showcase their knowledge and skills.
+                    CyberCrew
+                    is
+                    famous for organising an annual event, TechKnow, which is the only IT related mega-event for schools
+                    in
+                    Jammu
+                    and Kashmir. We at the CyberCrew communicate using a language that only we decipher best. The
+                    CyberCrew provides an opportunity for all the IT fanatics of the school to take their first step
+                    towards realizing their dream of deciphering computers. The best part of it all is that we provide
+                    you
+                    with
+                    a
+                    beginning in learning IT at home i.e, in our own school.
+                </p>
+            </div>
+            <p></p>
+            <p> </p>   
+            <!-- <div class="c2">
+                <h1>Recent Articles</h1>
+                <div class="articleContainer" id="articleContainer">
+                    <script>
+                        fetch("https://website-backend-y7wt.onrender.com/articles")
+
+                            .then(res => res.json())
+                            .then(data => {
+                                document.getElementById('articleContainer').innerHTML = "";
+                                data.splice(3)
+                                for (let art of data) {
+                                    let article = document.createElement("div");
+                                    if (art.tags.includes("youtube")) {
+                                        article.setAttribute('onclick', `window.location.assign("${art.ytUrl}")`);
+                                    }
+                                    else {
+                                        article.setAttribute('onclick', `window.location.assign("../article?title=${art.title.split(' ').join('_')}")`);
+                                    }
+                                    article.id = "art";
+                                    article.className = "art clickable";
+                                    article.innerHTML = `
+                                    <div class="artImage" id="artimg ${art.title.split(' ').join('_')}">
+                                    </div>
+                                    <p class="artTitle">${art.title}</p>
+                                    `;
+                                    document.getElementById("articleContainer").appendChild(article);
+                                    document.getElementById("artimg " + art.title.split(' ').join('_')).style.backgroundImage = `url("${art.imgUrl}")`;
+                                }
+                            })
+                    </script>
+                    <img class="loading" src="./assets/loading.svg">
+                </div>
+            </div> -->
+
+            <div class="Events">
+                
+
+            </div>
+            <div class="footer" id="footer">
+                <script>
+                    //I have no idea why this is not getting the full width, so for now i used this workaround
+                    // TODO: Fix this
+                    let elem = document.getElementById('c1');
+                    document.getElementById('footer').style.width = `${elem.offsetWidth}px`;
+                    let resize = (event) => {
+                        let elem = document.getElementById('c1');
+                        document.getElementById('footer').style.width = `${elem.offsetWidth}px`;
+                    };
+                    window.addEventListener('resize', resize);
+                </script>
+                <div class="socials footer-card">
+                    <div onclick="window.open('https://github.com/cybercrew')" class="socials-circle clickable"><img
+                            src="./assets/github.svg"></div>
+                    <div onclick="window.open('https://www.facebook.com/dpscybercrew/')"
+                        class="socials-circle clickable">
+                        <img src="./assets/facebook.svg">
+                    </div>
+                    <div class="socials-circle clickable x"><img src="./assets/x.svg">
+                    </div>
+                </div>
+                <div class="school-container footer-card">
+                    <div class="school clickable" onclick="window.location.href=('https://dpssrinagar.com')">
+                        <div class="schoolWrapper">
+                            <img src="./assets/dpslogo.png" alt="DPS Srinagar Logo">
+                            <p>Visit School Website</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact footer-card">
+                    <div class="text">
+                        <h1>Contact</h1>
+                        <p>Email: cybercrew@dpssrinagar.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
